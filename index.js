@@ -23,6 +23,16 @@ app.get('/', (req, res) => {
 
 });
 
+app.get('/test', (req, res) => {
+
+  res.sendFile(__dirname + '/public/test.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
+
 
 /**
  * SERVER INITIALIZATION
