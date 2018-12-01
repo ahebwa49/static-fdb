@@ -32,6 +32,15 @@ app.get('/test', (req, res) => {
   });
 });
 
+app.get('/testnav', (req, res) => {
+
+  res.sendFile(__dirname + '/public/testnav.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
 
 
 /**
