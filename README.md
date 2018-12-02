@@ -14,3 +14,7 @@ the following:
 > npm install
 > npm start
 ```
+
+
+# Webpack
+WebPack is a build tool that allows us to take all our assets and turn them into a production-ready bundle. All our files are considered modules and we tell webpack to lead these modules when we configure our projects.
