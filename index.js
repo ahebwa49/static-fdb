@@ -2,11 +2,13 @@ import express from 'express';
 
 const app = express();
 const PORT = 8080;
-// const DEV_ENV = 'dev'; // 'prod' development or production environments
-// const ASSETS_DIR = DEV_ENV ? 'dev' : 'prod';
-const ASSETS_DIR = 'assets';
-const FRONTEND_DIR = `${ASSETS_DIR}/front-end`;
-const BACKEND_DIR = `${ASSETS_DIR}/back-end`;
+const ENV = 'dev'; // 'prod' development or production environments
+// Directory of front-end files built from webpack
+const DIR_FRONT_END_BUILD = 'build';
+// Front-end directory served to the server: 'dev' or 'prod'
+const DIR_FRONTEND_ASSETS = `${DIR_FRONT_END_BUILD}-${ENV}`;
+// const DIR_FRONTEND = `${ASSETS_DIR}-${ENV}`;
+// const BACKEND_DIR = `${ASSETS_DIR}/back-end`;
 
 
 /**
@@ -26,7 +28,7 @@ app.get('/', (req, res) => {
 
   // res.send(`Get request on port: ${PORT}`)
 
-  res.sendFile(__dirname + `/${FRONTEND_DIR}/index.html`, (err) => {
+  res.sendFile(__dirname + `/${DIR_FRONTEND_ASSETS}/index.html`, (err) => {
     if (err){
       res.status(500).send(err);
     }
@@ -36,7 +38,7 @@ app.get('/', (req, res) => {
 
 // app.get('/test', (req, res) => {
 
-//   res.sendFile(__dirname + `/${FRONTEND_DIR}/test.html`, (err) => {
+//   res.sendFile(__dirname + `/${DIR_FRONTEND_ASSETS}/test.html`, (err) => {
 //     if (err){
 //       res.status(500).send(err);
 //     }
@@ -45,7 +47,7 @@ app.get('/', (req, res) => {
 
 // app.get('/testnav', (req, res) => {
 
-//   res.sendFile(__dirname + `/${FRONTEND_DIR}/testnav.html`, (err) => {
+//   res.sendFile(__dirname + `/${DIR_FRONTEND_ASSETS}/testnav.html`, (err) => {
 //     if (err){
 //       res.status(500).send(err);
 //     }
