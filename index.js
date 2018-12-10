@@ -54,6 +54,14 @@ app.get('/', (req, res) => {
 //   });
 // });
 
+app.get('/testnavbar', (req, res) => {
+
+  res.sendFile(__dirname + '/public/testnavbar.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
 
 
 /**
