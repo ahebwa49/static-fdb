@@ -1,4 +1,6 @@
 /node_modules
+/build
+/build-dev
 bundle.js
 npm-debug.log
 .DS_Store

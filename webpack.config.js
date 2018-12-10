@@ -17,10 +17,15 @@
   * - minify HTML, CSS, JS
   */
 
-const path = require('path');
+const path = require('path'); 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ENV = 'dev'; // 'prod' development or production environments
 const ASSETS_DIR = './src/front-end';
 const BUILD_DIR = `build-${ENV}/front-end`;
+
+
+
+
 
 module.exports = {
   // https://webpack.js.org/concepts/mode/
@@ -37,13 +42,28 @@ module.exports = {
         test: /\.js$/, 
         exclude: /(node_modules)/, 
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
+          loader: 'babel-loader', // use the following loaders
+          options: { // Activate the following options
+            presets: [
+              '@babel/preset-env', // babel environment
+              // 'stage-0', // stage 0 babel functionalities
+              '@babel/preset-react' // react conversion (JSX, ...)
+            ]
           }
         }
       },
     ]
-  },
+  }, // module
+  plugins: [
+    /**
+     * TO DO:
+     * --------
+     * I need to find a way to move multiple files over (not just one)
+     */
+    new HtmlWebpackPlugin({
+      title: '---My App',
+      filename: 'index.html',
+      template: `${ASSETS_DIR}/index.html`
+    })]
 };
 
