@@ -32,6 +32,15 @@ app.get('/test', (req, res) => {
   });
 });
 
+app.get('/index2', (req, res) => {
+
+  res.sendFile(__dirname + '/public/index2.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
 app.get('/testnavbar', (req, res) => {
 
   res.sendFile(__dirname + '/public/testnavbar.html', (err) => {
