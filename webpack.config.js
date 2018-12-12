@@ -60,10 +60,23 @@ module.exports = {
      * --------
      * I need to find a way to move multiple files over (not just one)
      */
+    //- Main HTML file
     new HtmlWebpackPlugin({
       title: '---My App',
       filename: 'index.html',
       template: `${ASSETS_DIR}/index.html`
-    })]
+    }), 
+    //- TESTING HTML file
+    new HtmlWebpackPlugin({
+      title: 'test 1',
+      filename: 'test1.html',
+      template: `${ASSETS_DIR}/test1.html`
+    }),
+    new HtmlWebpackPlugin({
+      title: 'test nav',
+      filename: 'testnav.html',
+      template: `${ASSETS_DIR}/testnav.html`
+    })
+  ]
 };
 
