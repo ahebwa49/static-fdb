@@ -41,6 +41,15 @@ app.get('/index2', (req, res) => {
   });
 });
 
+app.get('/login', (req, res) => {
+
+  res.sendFile(__dirname + '/public/login.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
 
 /**
  * SERVER INITIALIZATION
