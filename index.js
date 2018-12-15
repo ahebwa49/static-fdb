@@ -50,6 +50,15 @@ app.get('/login', (req, res) => {
   });
 });
 
+app.get('/create_post', (req, res) => {
+
+  res.sendFile(__dirname + '/public/create_post.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
 
 /**
  * SERVER INITIALIZATION
