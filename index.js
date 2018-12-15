@@ -59,6 +59,15 @@ app.get('/create_post', (req, res) => {
   });
 });
 
+app.get('/post', (req, res) => {
+
+  res.sendFile(__dirname + '/public/post.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
 
 /**
  * SERVER INITIALIZATION
