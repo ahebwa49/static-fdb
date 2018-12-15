@@ -55,26 +55,71 @@
       </nav>
         <!--/Navbar-->
     </header>
+    <!--Main-->
+    <main>
+      <!-- Default post creation form -->
+      <form class="text-center border border-light p-5">
 
+        <p class="h4 mb-4">Create a new post</p>
 
-          <footer class="page-footer font-small bg-light pt-4 mt-4">
+        <!-- Title -->
+        <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
 
-            <!-- Footer Links -->
-            <div class="container text-center">
-                  <!-- Content -->
-                  <h5>LIVINGSTONE ASABAHEBWA</h5>
-                  <p>Full Stack Developer</p>
+        <!-- Category -->
+        <select class="browser-default custom-select mb-4">
+          <option value="" selected>Choose Category</option>
+          <option value="1">5G New Radio</option>
+          <option value="2">Artificial Intelligence</option>
+          <option value="3">Internet of Things</option>
+        </select>
 
-              </div>
+        <!-- Content -->
+        <div class="form-group">
+          <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Content"></textarea>
+        </div>
 
-                <hr class="clearfix w-100 d-md-none pb-3">
+        <!--File Input component -->
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+        <!--/File Input component -->
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-              <a href="https://futuredigitalblog.com">futuredigitalblog.com</a>
-            </div>
-            <!-- Copyright -->
-            </footer>
+        <div>
+        <!-- submit button -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <!-- submit button -->
+
+        <!-- Cancel button -->
+        <button class="btn btn-danger" type="submit">Cancel</button>
+        <!-- /Cancel button -->
+        </div>
+      </form>
+      <!--/Default create post form -->
+    </main>
+<footer class="page-footer font-small bg-light pt-4 mt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center">
+    <!-- Content -->
+    <h5>LIVINGSTONE ASABAHEBWA</h5>
+    <p>Full Stack Developer</p>
+
+  </div>
+
+  <hr class="clearfix w-100 d-md-none pb-3">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://futuredigitalblog.com">futuredigitalblog.com</a>
+  </div>
+  <!-- Copyright -->
+  </footer>
 
     <!-- WILL SOON REPLACED BY BUNDLE.JS -->
     <!-- Optional JavaScript -->
