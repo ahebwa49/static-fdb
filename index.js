@@ -36,27 +36,36 @@ app.get('/', (req, res) => {
 
 });
 
-// app.get('/test', (req, res) => {
+app.get('/index2', (req, res) => {
 
-//   res.sendFile(__dirname + `/${DIR_FRONTEND_ASSETS}/test.html`, (err) => {
-//     if (err){
-//       res.status(500).send(err);
-//     }
-//   });
-// });
+  res.sendFile(__dirname + '/public/index2.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
 
-// app.get('/testnav', (req, res) => {
+app.get('/login', (req, res) => {
 
-//   res.sendFile(__dirname + `/${DIR_FRONTEND_ASSETS}/testnav.html`, (err) => {
-//     if (err){
-//       res.status(500).send(err);
-//     }
-//   });
-// });
+  res.sendFile(__dirname + '/public/login.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
 
-app.get('/testnavbar', (req, res) => {
+app.get('/create_post', (req, res) => {
 
-  res.sendFile(__dirname + '/public/testnavbar.html', (err) => {
+  res.sendFile(__dirname + '/public/create_post.html', (err) => {
+    if (err){
+      res.status(500).send(err);
+    }
+  });
+});
+
+app.get('/post', (req, res) => {
+
+  res.sendFile(__dirname + '/public/post.html', (err) => {
     if (err){
       res.status(500).send(err);
     }

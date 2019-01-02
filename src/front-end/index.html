@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,64 +16,313 @@
 
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body>
-    <div class="container">
-      <header>
-        <p>
-          This is my header
-        </p>
-      </header>
-        <h1>future digital blog</h1>
-      <div class="row">
-        <section class="col-md-8">
-          <ul>
-            <li>Replace dummy title with your blod title</li>
-            <li>Go back to your wireframe and:</li>
-              <li>
-                <ul>
-                  <li>Create basic layout: global container, header, main content, footer</li>
-                  <li>Look into <a href="https://getbootstrap.com/docs/4.1/components/alerts/" target="_blank">bootstrap components</a>
-                     to see those which are close enough to your wireframe components to be reused</li>
-                </ul>
+
+<body>
+
+  <!--Main Navigation-->
+
+  <header>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+
+      <!-- Additional container -->
+      <div class="container">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="/">fdb</a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">5G</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">IoT</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">AI</a>
               </li>
           </ul>
-        </section>
-        <aside class="col-md-4">
-          <p>
-            This is my side section
-          </p>
-        </aside>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/create_post">Admin</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <!-- Links -->
+      </div>
+      <!-- Collapsible content -->
+    </div>
+      <!-- Additional container -->
+  </nav>
+    <!--/Navbar-->
+    <!--Mask-->
+    <div id="intro" class="view">
+
+      <div class="mask rgba-black-strong">
+
+        <div class="container fluid d-flex align-items-center justify-content-center h-100">
+
+            <div class="row d-flex justify-content-center text-center">
+
+              <div class="col-md-10">
+
+                <!-- Heading -->
+                <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Future digital blog</h2>
+
+                <!-- Divider -->
+                <hr class="hr-light">
+
+                <!-- Description -->
+                <h4 class="white-text my-4">Life in an automated society</h4>
+                <button type="button" class="btn btn-outline-white">Read more<i class="fa fa-book ml-2"></i></button>
+
+              </div>
+
+          </div>
+
       </div>
 
-      <div class="row">
-        <footer class="col-sm-12">
-          &copy; copyright 2018
-        </footer>
-      </div>
-    <!--  <div class="row">
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-          Two of three columns
-        </div>
-        <div class="col-sm">
-          three of three columns
-        </div>
-  </div>
--->
-
-    <script src="js/bundle.js"></script>
-    <!-- WILL SOON REPLACED BY BUNDLE.JS -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <!-- WILL SOON REPLACED BY BUNDLE.JS -->
     </div>
 
+  </div>
+  <!--/.Mask-->
 
+  </header>
+<!--Main Navigation-->
 
-  </body>
+<!--Main layout-->
+    <main  class="mt-5">
+      <!--Main container-->
+      <div class="container">
+
+          <!--Grid row 1-->
+          <div class="row">
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <!--Card 1-->
+                <div class="card">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img src="./images/apple.jpg" class="card-img-top" alt="apple.jpg">
+                    <a href="#">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="/post" class="btn btn-light">Read more</a>
+                  </div>
+
+                </div>
+                <!--/.Card 1-->
+
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4">
+
+                <!--Card 2-->
+                <div class="card">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img src="./images/apple.jpg" class="card-img-top" alt="">
+                    <a href="#">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="/post" class="btn btn-light">Read more</a>
+                  </div>
+
+                </div>
+                <!--/.Card 2-->
+
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-lg-4 col-md-6 mb-4">
+
+                <!--Card 3-->
+                <div class="card">
+
+                  <!--Card image-->
+                  <div class="view overlay">
+                    <img src="./images/apple.jpg" class="card-img-top" alt="">
+                    <a href="#">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <!--Card content-->
+                  <div class="card-body">
+                    <!--Title-->
+                    <h4 class="card-title">Card title</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="/post" class="btn btn-light">Read more</a>
+                  </div>
+
+                </div>
+                <!--/.Card 3-->
+
+                </div>
+                <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-4 col-md-6 mb-4">
+                    <!--Card 4-->
+                    <div class="card">
+
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img src="./images/apple.jpg" class="card-img-top" alt="">
+                        <a href="#">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="/post" class="btn btn-light">Read more</a>
+                      </div>
+
+                    </div>
+        <!--/.Card 4-->
+
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-4 col-md-6 mb-4">
+
+                    <!--Card 5-->
+                    <div class="card">
+
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img src="./images/apple.jpg" class="card-img-top" alt="">
+                        <a href="#">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="/post" class="btn btn-light">Read more</a>
+                      </div>
+
+                    </div>
+                    <!--/.Card 5-->
+
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-4 col-md-6 mb-4">
+
+                    <!--Card 6-->
+                    <div class="card">
+
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img src="./images/apple.jpg" class="card-img-top" alt="">
+                        <a href="#">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="/post" class="btn btn-light">Read more</a>
+                      </div>
+
+                    </div>
+                    <!--/.Card 6-->
+
+                    </div>
+                    <!--Grid column-->
+
+                  </div>
+                  <!--/Grid row 1-->
+
+            </div>
+    </main>
+<!--/Main layout-->
+
+<!--Footer-->
+<footer class="page-footer font-small bg-dark pt-4 mt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center">
+          <!-- Content -->
+          <h5>LIVINGSTONE ASABAHEBWA</h5>
+          <p>Full Stack Developer</p>
+
+    </div>
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://futuredigitalblog.com">futuredigitalblog.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+<!--Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- WILL SOON REPLACED BY BUNDLE.JS -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- WILL SOON REPLACED BY BUNDLE.JS -->
+</body>
+
 </html>
