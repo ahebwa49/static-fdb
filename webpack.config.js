@@ -44,7 +44,7 @@ module.exports = {
         ],
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `${BUILD_DIR}/js/`)
+    path: path.join(__dirname, `${BUILD_DIR}`)
   },
   module: {
     rules: [

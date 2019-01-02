@@ -6,7 +6,7 @@ const ENV = 'dev'; // 'prod' development or production environments
 // Directory of front-end files built from webpack
 const DIR_FRONT_END_BUILD = 'build';
 // Front-end directory served to the server: 'dev' or 'prod'
-const DIR_FRONTEND_ASSETS = `${DIR_FRONT_END_BUILD}-${ENV}`;
+const DIR_FRONTEND_ASSETS = `${DIR_FRONT_END_BUILD}-${ENV}/front-end`;
 // const DIR_FRONTEND = `${ASSETS_DIR}-${ENV}`;
 // const BACKEND_DIR = `${ASSETS_DIR}/back-end`;
 
@@ -16,7 +16,7 @@ const DIR_FRONTEND_ASSETS = `${DIR_FRONT_END_BUILD}-${ENV}`;
  * (Any files contained with "public" folder will be served)
  * -------------------
  */
-app.use(express.static(ASSETS_DIR));
+app.use(express.static(DIR_FRONTEND_ASSETS));
 
 
 /**
